@@ -16,27 +16,24 @@ type Props = {
 };
 
 export default function Vehicle(props: Props) {
-  const { media, name, condition } = props;
+  const { media, name, condition, is_sold } = props;
 
-  // TODO
-  // `props.media` is an array. Find the media item with placement='featured'
-  const featuredMedia = "https://via.placeholder.com/1000x600";
+  const conditionMap: Record<string, string> = {
+    new: "New",
+    used: "Second hand",
+    demo: "Dealer demo",
+  };
+
+  const formattedCondition = conditionMap[condition] || condition;
+  const featuredMediaItem = media.find((item) => item.placement === 'featured');
+  const featuredMediaSrc = featuredMediaItem ? featuredMediaItem.src : "https://via.placeholder.com/1000x600";
 
   return (
     <div className={styles.vehicle}>
-      <img className={styles.media} src={featuredMedia} alt="[alt]" />
+      <img className={styles.media} src={featuredMediaSrc} alt={featuredMediaItem?.alt || "[alt]"} />
       <h2 className={styles.name}>{name}</h2>
-
-      {/* 
-        TODO - The `condition` is in lowercase and not friendly. Map the condition as follows and dispay the friendly version:
-
-        - new -> "New"
-        - used -> "Second hand"
-        - demo -> "Dealer demo"
-      */}
-      <Tag>{condition}</Tag>
-
-      {/* TODO - Add another <Tag/> component which shows "Sold" or "Available now", depending on whether the vehicle's is_sold property is true/false (respectively) */}
+      <Tag>{formattedCondition}</Tag>
+      <Tag is_sold={is_sold ? "red" : "green"}>{is_sold ? "Sold" : "Available now"}</Tag>
     </div>
   );
 }

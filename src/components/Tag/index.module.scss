@@ -5,4 +5,26 @@
   display: inline-block;
   color: #2c2c2c;
   font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: .2s ease;
+  &:hover {
+    background-color: darken($color: #ccc, $amount: 10);
+  }
+}
+
+.green {
+  background-color: green;
+  color: white;
+  &:hover {
+    background-color: darken($color: green, $amount: 10);
+  }
+}
+
+.red {
+  background-color: red;
+  color: white;
+  &:hover {
+    background-color: darken($color: red, $amount: 10);
+  }
 }
