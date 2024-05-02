@@ -32,3 +32,36 @@ To run the project locally, follow these steps:
 ```git bash
   git clone https://github.com/your-username/youtube-clone.git
 ```
+2. Navigate to the project directory:
+```git bash
+  cd youtube-clone
+```
+3. Install dependencies:
+```git bash
+  npm install
+```
+4. Run the development server:
+```git bash
+  npm run dev
+```
+
+
+5. Open your web browser and go to `http://localhost:3000`.
+
+## Features
+- Search for YouTube videos using keywords.
+- View a list of search results with video thumbnails and titles.
+- Play selected videos in a video player.
+- Discover related videos based on the selected video.
+
+## Technologies Used
+- React.js
+- Axios
+- Ant Design
+
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
