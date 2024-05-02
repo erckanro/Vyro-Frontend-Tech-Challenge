@@ -18,3 +18,14 @@
 - [ ] In `App.module.scss`, update the grid styles to show the correct number of `Vehicle` cards per row, per breakpoint.
 
 Once you're done, submit this code to a new github repo and share with @willtpwise.
+
+
+# YouTube Clone
+
+## Description
+This project is a YouTube clone where users can search for YouTube videos.
+
+## Getting Started
+To run the project locally, follow these steps:
+
+1. Clone the repository:
