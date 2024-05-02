@@ -29,3 +29,6 @@ This project is a YouTube clone where users can search for YouTube videos.
 To run the project locally, follow these steps:
 
 1. Clone the repository:
+```git bash
+  git clone https://github.com/your-username/youtube-clone.git
+```
